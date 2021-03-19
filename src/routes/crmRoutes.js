@@ -1,3 +1,5 @@
+const controllers = require('./../controllers/crmControllers');
+
 const routes = (app) => {
   app
     .route("/contacts")
@@ -13,9 +15,7 @@ const routes = (app) => {
       }
     )
 
-    .post((req, resp) => {
-      resp.send("POST contacts works");
-    });
+    .post(controllers.addNewContact);
 
   app
     .route("/contacts/:id")
@@ -28,3 +28,5 @@ const routes = (app) => {
 };
 
 exports.routes = routes;
+
+
