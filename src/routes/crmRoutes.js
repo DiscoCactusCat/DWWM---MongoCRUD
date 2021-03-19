@@ -4,7 +4,7 @@ const routes = (app) => {
     .get(
         // Middleware : Réception + Traitement
       (req, resp, next) => {
-        console.log("Request GET of a user on contacts/");
+        console.log("Request GET of a user on : "+ req.originalUrl);
         next();
       },
     //   // Envoi de la réponse
